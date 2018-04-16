@@ -13,12 +13,12 @@ int test_main( int, char *[ ] ) // note the name!
     CircularInt hour {1, 12};
     CircularInt tmp=hour;
     //before operator
-	BOOST_CHECK( hour.getPos()==1);
+    BOOST_CHECK( hour.getPos()==1);
     //operator '+='
-	hour += 4;  
+    hour += 4;  
     BOOST_CHECK(hour.getPos()==5);
     //operators '+=' and '++'
-	(hour+=2)++;
+    (hour+=2)++;
     BOOST_CHECK(hour.getPos()==8);
     //operator '+='
     hour += 18;
@@ -27,7 +27,7 @@ int test_main( int, char *[ ] ) // note the name!
     -hour;
     BOOST_REQUIRE(hour.getPos()==10);
     //operators '=' and int '+' CircularInt
-	hour= 1-hour;
+    hour= 1-hour;
     BOOST_REQUIRE(hour.getPos()==3);            //BOOST_REQUIRE(hour.getPos()==11);
     //operator CircularInt '+' CircularInt
     tmp=hour+hour; 
